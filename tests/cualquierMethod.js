@@ -1,4 +1,4 @@
-var aspect = require('aspect-js');
+import aspect from 'aspect-js';
 
 // Define un objeto genérico
 var myObject = {

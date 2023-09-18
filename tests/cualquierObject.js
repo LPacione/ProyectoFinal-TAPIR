@@ -1,4 +1,4 @@
-var aspect = require('aspect-js');
+import aspect from 'aspect-js';
 
 // Función para agregar un aspecto a cualquier objeto y método
 function applyAspectToObject(obj) {
