@@ -1,4 +1,4 @@
-class TestingCore {
+export class TestingCore {
    static mapClassToTestingInformation = new Map();
 
    static mainMethod() {
@@ -54,11 +54,11 @@ class TestingCore {
 }
 
 // Pointcut para la ejecución del método principal
-function mainMethod() {
-   TestingSetup.setup();
-}
-
-// Pointcut para la ejecución de otros métodos
-function afterExecution(thisJoinPointStaticPart, thisJoinPoint) {
-   TestingCore.afterExecution(thisJoinPointStaticPart, thisJoinPoint);
-}
+export function mainMethod() {
+    TestingSetup.setup();
+  }
+  
+  // Pointcut para la ejecución de otros métodos
+  export function afterExecution(thisJoinPointStaticPart, thisJoinPoint) {
+    TestingCore.afterExecution(thisJoinPointStaticPart, thisJoinPoint);
+  }

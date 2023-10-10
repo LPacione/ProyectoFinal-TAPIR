@@ -11,7 +11,7 @@ export class TestingInformation{
         this.mapObjectsToCallSequence = mapObjectsToCallSequence;
         this.mapMethodsToSymbols = mapMethodsToSymbols;
         this.regularExpression = regularExpression;
-        this.matcher = matcher;
+        this.matcher = matcher || (this.regularExpression ? new RegExp(this.regularExpression) : null);
         this.abort = abort;
     }
 
