@@ -1,22 +1,22 @@
 export class Account {
     amount;
     name;
-    isVerified;
+    verified;
 
     constructor(name) {
         this.amount = 0;
-        this.isVerified = false;
+        this.verified = false;
         this.name = name;
         console.log("Account "+this.name+" created");
     }
 
     verify(){
-        this.isVerified = true;
+        this.verified = true;
         console.log("Account "+this.name+" verified");
     }
 
     isVerify(){
-        return this.isVerified;
+        return this.verified;
     }
 
     deposit(amount){
@@ -40,7 +40,7 @@ export class Account {
 
     close(){
         this.amount = 0;
-        this.isVerified = false;
+        this.verified = false;
         console.log("Account "+this.name+" closed");
     }
 

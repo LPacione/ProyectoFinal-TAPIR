@@ -2,8 +2,8 @@ import {Account} from './Account.mjs';
 
 export function validExample(){
 
-    const a1 = new Account("a1");
-    const a2 = new Account("a2");
+    let a1 = new Account("a1");
+    let a2 = new Account("a2");
 
     a1.verify();
 		

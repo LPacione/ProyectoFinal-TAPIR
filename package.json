@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "aspect-js": "^1.0.3"
+    "to-aop": "^0.5.4"
   },
   "type": "module"
 }

@@ -2,7 +2,7 @@ import {Account} from './Account.mjs';
 
 export function invalidExample(){
 
-  const a3 = new Account("a3");
+  let  a3 = new Account("a3");
 
   a3.verify();
   a3.withdraw(3000);

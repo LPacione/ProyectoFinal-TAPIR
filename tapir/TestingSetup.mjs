@@ -5,6 +5,7 @@ import { TestingCore } from './TestingCore.mjs';
 
 export class TestingSetup {
     static setup() {
+        //console.log("Setup")
         let mapObjectsToCallSequence = null;
         let mapMethodsToSymbols = null;
         let regularExpression = null;
@@ -13,18 +14,14 @@ export class TestingSetup {
         // Especificación de la clase de prueba
         TestingCore.mapClassToTestingInformation = new Map();
 
-        // Configuración de prueba para la clase Account
-        // Definición de los métodos y sus símbolos correspondientes
         mapObjectsToCallSequence = new Map();
 
-        const accountInstanceAccount = new Account();
-
         mapMethodsToSymbols = new Map();
-        mapMethodsToSymbols.set(accountInstanceAccount.constructor, "c"); // Cambia accountInstanceAccount.constructor por Account
-        mapMethodsToSymbols.set(accountInstanceAccount.verify, "v"); // Ahora es correcto
-        mapMethodsToSymbols.set(accountInstanceAccount.deposit, "d");
-        mapMethodsToSymbols.set(accountInstanceAccount.withdraw, "w");
-        mapMethodsToSymbols.set(accountInstanceAccount.close, "x");
+        mapMethodsToSymbols.set("constructor", "c");
+        mapMethodsToSymbols.set("verify", "v");
+        mapMethodsToSymbols.set("deposit", "d");
+        mapMethodsToSymbols.set("withdraw", "w");
+        mapMethodsToSymbols.set("close", "x");
 
         // Definición de la expresión regular
         regularExpression = /cvd(d|w)*x/;
@@ -36,10 +33,9 @@ export class TestingSetup {
         const tiAccount = new TestingInformation(Account.name, mapObjectsToCallSequence, mapMethodsToSymbols, regularExpression, matcher, true);
         TestingCore.mapClassToTestingInformation.set(Account.name, tiAccount);
 
-        console.log(tiAccount)
-        console.log(TestingCore)
-        console.log("------------")
-        
+        // console.log(tiAccount)
+        // console.log(TestingCore)
+        // console.log("------------") 
         //return [TestingCore, mapObjectsToCallSequence, mapMethodsToSymbols, regularExpression, matcher, mapClassToTestingInformation]
 
         mapObjectsToCallSequence = null;
@@ -49,14 +45,14 @@ export class TestingSetup {
 
         // Configuración de prueba para la clase CheckAccount
         // Definición de los métodos y sus símbolos correspondientes
-        const accountInstanceCheckAccount = new CheckAccount();
+        // const accountInstanceCheckAccount = new CheckAccount();
 
         mapMethodsToSymbols = new Map();
-        mapMethodsToSymbols.set(accountInstanceCheckAccount.constructor, "c");
-        mapMethodsToSymbols.set(accountInstanceCheckAccount.verify, "v");
-        mapMethodsToSymbols.set(accountInstanceCheckAccount.deposit, "d");
-        mapMethodsToSymbols.set(accountInstanceCheckAccount.withdraw, "w");
-        mapMethodsToSymbols.set(accountInstanceCheckAccount.close, "x");
+        mapMethodsToSymbols.set("constructor", "c");
+        mapMethodsToSymbols.set("verify", "v");
+        mapMethodsToSymbols.set("deposit", "d");
+        mapMethodsToSymbols.set("withdraw", "w");
+        mapMethodsToSymbols.set("close", "x");
 
         // Definición de la expresión regular
         regularExpression = /cvd(d|w)*x/;
@@ -68,8 +64,8 @@ export class TestingSetup {
         const tiCheckAccount = new TestingInformation(CheckAccount.name, mapObjectsToCallSequence, mapMethodsToSymbols, regularExpression, matcher, false);
         TestingCore.mapClassToTestingInformation.set(CheckAccount.name, tiCheckAccount);
 
-        console.log(tiCheckAccount)
-        console.log(TestingCore)
-        console.log("------------")
+        // console.log(tiCheckAccount)
+        // console.log(TestingCore)
+        // console.log("------------")
     }
 }

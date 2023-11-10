@@ -1,3 +1,7 @@
 import { TestingSetup } from "./TestingSetup.mjs";
+import { TestingCore } from "./TestingCore.mjs";
+import { Account } from "../main/modules/Account.mjs";
 
-TestingSetup.setup()
+//TestingCore.mainMethod()
+
+console.log(Account.name)
