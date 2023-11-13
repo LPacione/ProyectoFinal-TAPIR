@@ -5,7 +5,7 @@ import { TestingCore } from './TestingCore.mjs';
 
 export class TestingSetup {
     static setup() {
-        //console.log("Setup")
+        console.log("In TestingSetup - Setup method")
         let mapObjectsToCallSequence = null;
         let mapMethodsToSymbols = null;
         let regularExpression = null;

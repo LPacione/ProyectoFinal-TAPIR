@@ -7,12 +7,12 @@ export class Account {
         this.amount = 0;
         this.verified = false;
         this.name = name;
-        console.log("Account "+this.name+" created");
+        //console.log("Account "+this.name+" created");
     }
 
     verify(){
         this.verified = true;
-        console.log("Account "+this.name+" verified");
+        //console.log("Account "+this.name+" verified");
     }
 
     isVerify(){
@@ -20,28 +20,28 @@ export class Account {
     }
 
     deposit(amount){
-        if(this.isVerify()){
+        if(!this.verified){
             this.amount += amount;
-            console.log("Deposit "+amount+" successful in "+this.name);
+            //console.log("Deposit "+amount+" successful in "+this.name);
         }
     }
 
     withdraw(amount){ 
-        if(this.isVerify()){
+        if(!this.verified){
             this.amount -= amount;
-            console.log("Withdraw "+amount+" successful in "+this.name);
+            //console.log("Withdraw "+amount+" successful in "+this.name);
         }
     }
 
     getAmount(){
-        console.log("Amount: "+this.amount);
+        //console.log("Amount: "+this.amount);
         return this.amount;
     }
 
     close(){
         this.amount = 0;
         this.verified = false;
-        console.log("Account "+this.name+" closed");
+        //console.log("Account "+this.name+" closed");
     }
 
 }

@@ -1,7 +1,22 @@
 import { TestingSetup } from "./TestingSetup.mjs";
 import { TestingCore } from "./TestingCore.mjs";
-import { Account } from "../main/modules/Account.mjs";
+import { validExample } from "../main/modules/ValidExample.mjs";
+import { cualquierMethodAccount } from "../tests/cualquierMethodAccount.mjs";
 
-//TestingCore.mainMethod()
 
-console.log(Account.name)
+// console.log("Test")
+// console.log("-----")
+// let testingCore = new TestingCore()
+
+// cualquierMethodAccount.init();
+TestingCore.init()
+validExample()
+// const account = new Account('Luciano');
+// const accountBis = new Account('Ezequiel')
+// account.verify(); 
+// account.isVerify();
+// account.deposit(200);
+// account.withdraw(100);
+// account.getAmount();
+// account.close()
+

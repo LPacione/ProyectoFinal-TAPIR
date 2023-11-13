@@ -7,6 +7,7 @@ export class TestingInformation{
     abort = true;
 
     constructor(targetClass, mapObjectsToCallSequence, mapMethodsToSymbols, regularExpression, matcher, abort) {
+        console.log("Ingrese al constructor de TestingInfo")
         this.targetClass = targetClass;
         this.mapObjectsToCallSequence = mapObjectsToCallSequence;
         this.mapMethodsToSymbols = mapMethodsToSymbols;
