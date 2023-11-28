@@ -1,4 +1,4 @@
-export class TestingInformation{
+export class TestingInformation {
     targetClass;
     mapObjectsToCallSequence = new Map()
     mapMethodsToSymbols = new Map();
@@ -7,7 +7,6 @@ export class TestingInformation{
     abort = true;
 
     constructor(targetClass, mapObjectsToCallSequence, mapMethodsToSymbols, regularExpression, matcher, abort) {
-        console.log("Ingrese al constructor de TestingInfo")
         this.targetClass = targetClass;
         this.mapObjectsToCallSequence = mapObjectsToCallSequence;
         this.mapMethodsToSymbols = mapMethodsToSymbols;
@@ -49,7 +48,7 @@ export class TestingInformation{
     }
 
     getMatcher() {
-        return this.matcher;
+        return this.matcher instanceof RegExp ? this.matcher : new RegExp(this.regularExpression);
     }
 
     setMatcher(matcher) {
