@@ -40,7 +40,7 @@ export class TestingSetup {
         mapMethodsToSymbols.set("withdraw", "w");
         mapMethodsToSymbols.set("close", "x");
 
-        regularExpression = /cvd(d|w)*x/;
+        regularExpression = /^(c|$)(v|$)(d|$)(d|w|$)*(x|$)$/; 
 
         matcher = regularExpression.exec("");
 
