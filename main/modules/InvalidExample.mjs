@@ -1,14 +1,13 @@
-import {Account} from './Account.mjs';
+import { Account } from './Account.mjs';
 
-export function invalidExample(){
+export function invalidExample() {
 
-  let  a3 = new Account("a3");
-
-  a3.verify();
-  a3.withdraw(3000);
-  a3.deposit(1000);
-  a3.deposit(4000);
-  a3.withdraw(3000);
-  a3.close();
+  let a1 = new Account("a1");
+  a1.verify();
+  a1.withdraw(3000);
+  a1.deposit(1000);
+  a1.deposit(4000);
+  a1.withdraw(3000);
+  a1.close();
 };
 

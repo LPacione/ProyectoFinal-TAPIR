@@ -2,5 +2,8 @@
   "dependencies": {
     "to-aop": "^0.5.4"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

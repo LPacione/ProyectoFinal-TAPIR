@@ -7,28 +7,28 @@ export class CheckAccount {
         this.amount = 0;
         this.verified = false;
     }
-    
-    verify(){
+
+    verify() {
         this.verified = true;
     }
 
-    isVerify(){
+    isVerify() {
         return this.verified;
     }
 
-    deposit(amount){
-        if(this.isVerify()){
+    deposit(amount) {
+        if (this.isVerify()) {
             this.amount += amount;
         }
     }
 
-    withdraw(amount){ 
-        if(this.isVerify()){
+    withdraw(amount) {
+        if (this.isVerify()) {
             this.amount -= amount;
         }
     }
 
-    close(){
+    close() {
         this.amount = 0;
         this.verified = false;
     }

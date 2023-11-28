@@ -7,41 +7,39 @@ export class Account {
         this.amount = 0;
         this.verified = false;
         this.name = name;
-        //console.log("Account "+this.name+" created");
     }
 
-    verify(){
+    verify() {
         this.verified = true;
-        //console.log("Account "+this.name+" verified");
     }
 
-    isVerify(){
+    isVerify() {
         return this.verified;
     }
 
-    deposit(amount){
-        if(!this.verified){
+    deposit(amount) {
+        if (!this.verified) {
             this.amount += amount;
-            //console.log("Deposit "+amount+" successful in "+this.name);
         }
     }
 
-    withdraw(amount){ 
-        if(!this.verified){
+    withdraw(amount) {
+        if (!this.verified) {
             this.amount -= amount;
-            //console.log("Withdraw "+amount+" successful in "+this.name);
         }
     }
 
-    getAmount(){
-        //console.log("Amount: "+this.amount);
+    getAmount() {
         return this.amount;
     }
 
-    close(){
+    getName() {
+        return this.name;
+    }
+
+    close() {
         this.amount = 0;
         this.verified = false;
-        //console.log("Account "+this.name+" closed");
     }
 
 }
